@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
@@ -45,7 +44,7 @@ const Right = styled.div`
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
-  margin-left:25px;
+  margin-left: 25px;
 `;
 const Input = styled.input`
   border: none;
@@ -65,7 +64,7 @@ export const Header = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search style={{color:"gray",fontSize:16}}/>
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
@@ -76,7 +75,7 @@ export const Header = () => {
           <MenuItem>Sign In</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined/>
+              <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
         </Right>
