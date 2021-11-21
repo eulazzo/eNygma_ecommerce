@@ -33,7 +33,7 @@ const Select = styled.select`
 `;
 
 const Option = styled.option`
-  
+  outline: none;
 `;
 
 export const ProductList = () => {
