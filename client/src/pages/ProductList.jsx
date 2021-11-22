@@ -1,9 +1,10 @@
-import { Header } from "../components/Header.jsx";
+import styled from "styled-components";
+import { Header } from "../components/Header";
 import { Announcement } from "../components/Announcement";
 import { Products } from "../components/Products";
 import { Newsletter } from "../components/Newsletter";
 import { Footer } from "../components/Footer";
-import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
@@ -14,27 +15,26 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
 `;
 
 const Filter = styled.div`
   margin: 20px;
+  ${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
 `;
 
 const FilterText = styled.span`
   font-size: 20px;
   font-weight: 600;
   margin-right: 20px;
+  ${mobile({ marginRight: "0px" })}
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
+  ${mobile({ margin: "10px 0px" })}
 `;
-
-const Option = styled.option`
-  outline: none;
-`;
+const Option = styled.option``;
 
 export const ProductList = () => {
   return (
@@ -44,7 +44,7 @@ export const ProductList = () => {
       <Title>Dresses</Title>
       <FilterContainer>
         <Filter>
-          <FilterText>Filter products:</FilterText>
+          <FilterText>Filter Products:</FilterText>
           <Select>
             <Option disabled selected>
               Color
@@ -68,7 +68,7 @@ export const ProductList = () => {
           </Select>
         </Filter>
         <Filter>
-          <FilterText>Sort products:</FilterText>
+          <FilterText>Sort Products:</FilterText>
           <Select>
             <Option selected>Newest</Option>
             <Option>Price (asc)</Option>

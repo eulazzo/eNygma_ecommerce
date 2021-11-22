@@ -9,10 +9,12 @@ import {
 } from "@material-ui/icons";
 
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
   align-items: center;
+  ${mobile({ flexDirection: "column" })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -23,9 +25,11 @@ const Left = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
 const Right = styled.div`
   flex: 1;
+  ${mobile({ backgroundColor: "fff8f8" })}
   padding: 20px;
 `;
 
@@ -73,7 +77,6 @@ const ContactItem = styled.div`
 
 const Payment = styled.img`
   width: 50%;
-  
 `;
 
 export const Footer = () => {
@@ -120,13 +123,14 @@ export const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px "}}/> 633 Dixie Path, South Tobinchester 98336
+          <Room style={{ marginRight: "10px " }} /> 633 Dixie Path, South
+          Tobinchester 98336
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px "}}/>1 434 4343 8
+          <Phone style={{ marginRight: "10px " }} />1 434 4343 8
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px "}} />
+          <MailOutline style={{ marginRight: "10px " }} />
           sac@talkto.com
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
