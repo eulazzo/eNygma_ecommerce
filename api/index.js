@@ -23,6 +23,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
-app.use("/api/carts", ordersRoute);
+app.use("/api/orders", ordersRoute);
 
 app.listen(8080, () => console.log("backend server is running!"));
