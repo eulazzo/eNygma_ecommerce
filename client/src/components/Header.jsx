@@ -2,12 +2,10 @@ import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
 import { mobile } from "../responsive";
-
+import { useSelector } from "react-redux";
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: "50px" })}
- 
-  
 `;
 
 const Wrapper = styled.div`
@@ -68,6 +66,8 @@ const Logo = styled.h1`
 `;
 
 export const Header = () => {
+  const quantity = useSelector((state) => state.cart?.quantity);
+
   return (
     <Container>
       <Wrapper>
@@ -85,7 +85,7 @@ export const Header = () => {
           <MenuItem>Login</MenuItem>
           <MenuItem>Sign In</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
