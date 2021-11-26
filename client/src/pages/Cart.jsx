@@ -4,13 +4,13 @@ import { Announcement } from "../components/Announcement";
 import { Footer } from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
-  ${mobile({ padding:"10"})}
-
+  ${mobile({ padding: "10" })}
 `;
 
 const Title = styled.h1`
@@ -35,14 +35,12 @@ const TopBottom = styled.button`
   color: ${(props) => props.type === "filled" && "white"};
 `;
 const TopTexts = styled.div`
-  ${mobile({ display:"none"})}
-
+  ${mobile({ display: "none" })}
 `;
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-  ${mobile({ flexDirection:"column"})}
-
+  ${mobile({ flexDirection: "column" })}
 `;
 const TopText = styled.span`
   text-decoration: underline;
@@ -52,14 +50,12 @@ const TopText = styled.span`
 
 const Info = styled.div`
   flex: 3;
-
 `;
 
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
-  ${mobile({ flexDirection:"column"})}
-
+  ${mobile({ flexDirection: "column" })}
 `;
 const ProductDetail = styled.div`
   flex: 2;
@@ -99,14 +95,12 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 24px;
   margin: 5px;
-  ${mobile({ margin:"5px 15px"})}
-
+  ${mobile({ margin: "5px 15px" })}
 `;
 const ProductPrice = styled.div`
   font-size: 30px;
   font-weight: 200;
-  ${mobile({ marginBottom:"20px"})}
-
+  ${mobile({ marginBottom: "20px" })}
 `;
 
 const Hr = styled.hr`
@@ -144,6 +138,8 @@ const SummaryButton = styled.button`
 `;
 
 export const Cart = () => {
+  const cart = useSelector((state) => state.cart);
+
   return (
     <Container>
       <Header />
@@ -160,67 +156,45 @@ export const Cart = () => {
         </Top>
         <Bottom>
           <Info>
-            <Product>
-              <ProductDetail>
-                <Image src="https://m.media-amazon.com/images/I/41IRRKXhFUL.jpg" />
-                <Details>
-                  <ProductName>
-                    {" "}
-                    <b>Product:</b> Philz Thunder Shoes
-                  </ProductName>
-                  <ProductId>
-                    {" "}
-                    <b>ID:</b> 453453655556000
-                  </ProductId>
+            {cart?.products.map((product) => (
+              <Product>
+                <ProductDetail>
+                  <Image src={product.img} />
+                  <Details>
+                    <ProductName>
+                      {" "}
+                      <b>Product:</b> {product.title}
+                    </ProductName>
+                    <ProductId>
+                      {" "}
+                      <b>ID:</b> {product._id}
+                    </ProductId>
 
-                  <ProductColor color="black" />
-                  <ProductSize>
-                    <b>Size:</b> 27.6
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Add style={{ cursor: "pointer" }} />
-                  <ProductAmount>2</ProductAmount>
-                  <Remove style={{ cursor: "pointer" }} />
-                </ProductAmountContainer>
-                <ProductPrice>$ 300</ProductPrice>
-              </PriceDetail>
-            </Product>
+                    <ProductColor color="black" />
+                    <ProductSize>
+                      <b>Size:</b> {product.size}
+                    </ProductSize>
+                  </Details>
+                </ProductDetail>
+                <PriceDetail>
+                  <ProductAmountContainer>
+                    <Add style={{ cursor: "pointer" }} />
+                    <ProductAmount>{product.quantity}</ProductAmount>
+                    <Remove style={{ cursor: "pointer" }} />
+                  </ProductAmountContainer>
+                  <ProductPrice>
+                    $ {product.price * product.quantity}
+                  </ProductPrice>
+                </PriceDetail>
+              </Product>
+            ))}
             <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src="https://www.footshop.eu/blog/wp-content/uploads/2020/01/17.jpg" />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> Jordan XLa Shoes
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 000655556354354
-                  </ProductId>
-
-                  <ProductColor color="gray" />
-                  <ProductSize>
-                    <b>Size:</b> 28
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Add style={{ cursor: "pointer" }} />
-                  <ProductAmount>2</ProductAmount>
-                  <Remove style={{ cursor: "pointer" }} />
-                </ProductAmountContainer>
-                <ProductPrice>$ 1400.00</ProductPrice>
-              </PriceDetail>
-            </Product>
           </Info>
           <Sumary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>$ 1700.00</SummaryItemPrice>
+              <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
@@ -233,7 +207,7 @@ export const Cart = () => {
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText type="total">Total</SummaryItemText>
-              <SummaryItemPrice>$ 1700.00</SummaryItemPrice>
+              <SummaryItemPrice>{cart.total}</SummaryItemPrice>
             </SummaryItem>
             <SummaryButton>CHECKOUT NOW</SummaryButton>
           </Sumary>
