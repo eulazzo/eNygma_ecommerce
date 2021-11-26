@@ -5,6 +5,13 @@ import { Footer } from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
+import StripeCheckout from "react-stripe-checkout";
+import { useState } from "react";
+import { useEffect } from "react";
+import { publicRequest } from "../requestMethods";
+import { useHistory } from "react-router";
+
+const KEY = process.env.REACT_APP_STRIPE;
 
 const Container = styled.div``;
 
@@ -139,6 +146,25 @@ const SummaryButton = styled.button`
 
 export const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const [stripeToken, setStripeToken] = useState(null);
+  const history = useHistory();
+  const onToken = (token) => setStripeToken(token);
+
+  useEffect(
+    () =>
+      stripeToken &&
+      cart.total >= 1 &&
+      (async () => {
+        try {
+          const { data } = await publicRequest.post("/checkout/payment", {
+            tokenId: stripeToken.id,
+            amount: cart.total * 100,
+          });
+          history.push("/success", { data });
+        } catch (error) {}
+      })(),
+    [stripeToken, cart.total, history]
+  );
 
   return (
     <Container>
@@ -209,7 +235,18 @@ export const Cart = () => {
               <SummaryItemText type="total">Total</SummaryItemText>
               <SummaryItemPrice>{cart.total}</SummaryItemPrice>
             </SummaryItem>
-            <SummaryButton>CHECKOUT NOW</SummaryButton>
+            <StripeCheckout
+              name="Lama Shop"
+              image="https://cdn.pixabay.com/photo/2016/08/01/10/14/maze-1560761_1280.png"
+              billingAddress
+              shippingAddress
+              description={`Your total is $${cart.total}`}
+              amount={cart.total * 100}
+              token={onToken}
+              stripeKey={KEY}
+            >
+              <SummaryButton>CHECKOUT NOW</SummaryButton>
+            </StripeCheckout>
           </Sumary>
         </Bottom>
       </Wrapper>
