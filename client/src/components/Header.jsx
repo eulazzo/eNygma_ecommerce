@@ -6,14 +6,16 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   height: 60px;
   ${mobile({ height: "50px" })}
+ 
+  
 `;
 
 const Wrapper = styled.div`
-  padding: 10px 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ${mobile({ padding: "10px 0" })}
+  ${mobile({ padding: "10px 0px" })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -36,6 +38,7 @@ const SearchContainer = styled.div`
 `;
 const Center = styled.div`
   flex: 1;
+  text-align: center;
 `;
 const Right = styled.div`
   flex: 1;

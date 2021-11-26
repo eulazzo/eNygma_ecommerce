@@ -5,30 +5,30 @@ import { Newsletter } from "../components/Newsletter";
 import { Footer } from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
+import { useLocation } from "react-router";
+import { useEffect } from "react";
+import { useState } from "react";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
-  ${mobile({ padding:"20px",flexDirection:"column" })}
-  
+  ${mobile({ padding: "20px", flexDirection: "column" })}
 `;
 const ImgContainer = styled.div`
   flex: 1;
-
 `;
 const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
-  ${mobile({ height:"40vh" })}
-
+  ${mobile({ height: "40vh" })}
 `;
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0 50px;
-  ${mobile({ padding:"10px"})}
- 
+  ${mobile({ padding: "10px" })}
 `;
 const Title = styled.h1`
   font-weight: 200;
@@ -46,8 +46,7 @@ const FilterContainer = styled.div`
   width: 50%;
   margin-top: 30px;
   justify-content: space-between;
-  ${mobile({ width:"100%"})}
-
+  ${mobile({ width: "100%" })}
 `;
 
 const Filter = styled.div`
@@ -81,8 +80,7 @@ const AddContainer = styled.div`
   width: 50%;
   justify-content: space-between;
   margin-top: 30px;
-  ${mobile({ width:"100%"})}
-
+  ${mobile({ width: "100%" })}
 `;
 const AmountContainer = styled.div`
   display: flex;
@@ -113,47 +111,79 @@ const Button = styled.button`
 `;
 
 export const Product = () => {
+  const { pathname } = useLocation();
+  const productId = pathname.split("/")[2];
+  const [product, setProduct] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState("");
+
+  useEffect(
+    () =>
+      (async () => {
+        try {
+          const { data } = await publicRequest.get(
+            `/products/find/${productId}`
+          );
+          setProduct(data);
+        } catch (error) {
+          console.log(error);
+        }
+      })(),
+    [productId]
+  );
+  const addOrRemove = (type) => {
+    type === "add"
+      ? setQuantity(quantity + 1)
+      : quantity > 1 && setQuantity(quantity - 1);
+  };
+  console.log(color,size)
   return (
     <Container>
       <Header />
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src={product?.img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Denin Jumpsuit</Title>
-          <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-            doloribus amet autem, aperiam dolore reiciendis a culpa, officiis
-            minima, reprehenderit harum ducimus iure quam molestias dolorem
-            temporibus eveniet nisi perferendis!
-          </Description>
-          <Price>$30</Price>
+          <Title>{product?.title}</Title>
+          <Description>{product?.desc}</Description>
+          <Price>${product?.price}</Price>
           <FilterContainer>
             <Filter>
               <FilterTitle>Color</FilterTitle>
-              <FilterColor color="black" />
-              <FilterColor color="darkblue" />
-              <FilterColor color="gray" />
+              {product?.color.map((color) => (
+                <FilterColor
+                  onClick={() => setColor(color)}
+                  color={color}
+                  key={color}
+                />
+              ))}
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
-              <FilterSize>
-                <FilterSizeOption>Xs</FilterSizeOption>
-                <FilterSizeOption>Sm</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>Xl</FilterSizeOption>
+              <FilterSize onChange={(e) => setSize(e.target.value)} >
+                {product?.size.map((size) => (
+                  <FilterSizeOption   key={size}>
+                    {size}
+                  </FilterSizeOption>
+                ))}
               </FilterSize>
             </Filter>
           </FilterContainer>
 
           <AddContainer>
             <AmountContainer>
-              <Remove style={{ cursor: "pointer" }} />
-              <Amount>1</Amount>
-              <Add style={{ cursor: "pointer" }} />
+              <Remove
+                style={{ cursor: "pointer" }}
+                onClick={() => addOrRemove("minus")}
+              />
+              <Amount>{quantity}</Amount>
+              <Add
+                style={{ cursor: "pointer" }}
+                onClick={() => addOrRemove("add")}
+              />
             </AmountContainer>
 
             <Button>ADD TO CART</Button>

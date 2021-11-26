@@ -3,7 +3,7 @@ import { Product } from "./Product";
 import { popularProducts } from "../dummyData";
 import { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div`
   padding: 20px;
@@ -20,7 +20,7 @@ export const Products = ({ catGory, filters, sortfilter }) => {
     () =>
       (async () => {
         try {
-          const { data } = await axios.get(
+          const { data } = await publicRequest.get(
             catGory ? `/products?category=${catGory}` : `/products`
           );
           setProducts(data);
