@@ -239,7 +239,7 @@ export const Cart = () => {
               <SummaryItemPrice>{cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
-              name="Lama Shop"
+              name="eNygma"
               image="https://cdn.pixabay.com/photo/2016/08/01/10/14/maze-1560761_1280.png"
               billingAddress
               shippingAddress
