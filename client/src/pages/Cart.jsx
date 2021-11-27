@@ -160,10 +160,13 @@ export const Cart = () => {
             tokenId: stripeToken.id,
             amount: cart.total * 100,
           });
-          history.push("/success", { data });
+          history.push("/success", {
+            stripeData: data,
+            products: cart,
+          });
         } catch (error) {}
       })(),
-    [stripeToken, cart.total, history]
+    [stripeToken, cart.total, history, cart]
   );
 
   return (
