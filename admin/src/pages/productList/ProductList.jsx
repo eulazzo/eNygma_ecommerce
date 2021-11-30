@@ -1,20 +1,21 @@
 import "./productList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
- 
+
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { deleteProduct, getProducts } from "../../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
+ 
 
 export default function ProductList() {
- 
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
+  
 
   useEffect(() => getProducts(dispatch), [dispatch]);
 
-  const deleteHandler = (id) => deleteProduct(id,dispatch)
+  const deleteHandler = (id) => deleteProduct(id, dispatch);
 
   const columns = [
     { field: "_id", headerName: "ID", width: 220 },
@@ -32,7 +33,7 @@ export default function ProductList() {
       },
     },
     { field: "inStock", headerName: "Stock", width: 200 },
-     
+
     {
       field: "price",
       headerName: "Price",
@@ -66,7 +67,7 @@ export default function ProductList() {
         columns={columns}
         pageSize={8}
         checkboxSelection
-        getRowId={row=>row._id}
+        getRowId={(row) => row._id}
       />
     </div>
   );

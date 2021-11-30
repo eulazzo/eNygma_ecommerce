@@ -17,8 +17,7 @@ export default function FeaturedInfo() {
     })();
   }, []);
 
-  console.log(income);
-  console.log(percentage);
+ 
 
   return (
     <div className="featured">
