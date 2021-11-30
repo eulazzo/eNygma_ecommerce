@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./newProduct.css";
-import app from "../../firebase";
 import {
   getStorage,
   ref,
@@ -10,13 +9,14 @@ import {
 
 import { addProduct } from "../../redux/apiCalls";
 import { useDispatch } from "react-redux";
+import app from "../../firebase";
 
 export default function NewProduct() {
   const [inputs, setInputs] = useState({});
   const [file, setFile] = useState(null);
   const [categories, setCategories] = useState([]);
   const dispatch = useDispatch();
-  
+
   const handleChange = (e) => {
     setInputs((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
@@ -69,6 +69,7 @@ export default function NewProduct() {
       }
     );
   };
+  console.log(file)
 
   return (
     <div className="newProduct">

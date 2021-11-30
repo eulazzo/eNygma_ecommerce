@@ -56,13 +56,12 @@ export const updateProduct = async (id, product, dispatch) => {
   }
 };
 
-export const addProduct = async (id, product, dispatch) => {
+export const addProduct = async (product, dispatch) => {
   dispatch(addProductStart());
   try {
-    //add
-    const { data } = await userRequest.post(`/products`, product );
-    dispatch(addProductSuccess(data));
-  } catch (error) {
+    const res = await userRequest.post(`/products`, product);
+    dispatch(addProductSuccess(res.data));
+  } catch (err) {
     dispatch(addProductFailure());
   }
 };
