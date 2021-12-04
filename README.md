@@ -1,5 +1,5 @@
 <h1 align="center">
-   <img alt="sigma" src="github/eNygma.svg" width="200px" />
+   <img alt="sigma" src="github/eNygma.svg" width="150px" />
 </h1>
 
  ![SIGMA CHAT GIF](github/LoginService.gif)
