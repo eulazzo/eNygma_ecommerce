@@ -8,8 +8,8 @@
 
  
 
-<p>Ecommerce Application with Register,Login Add To Cart, Payment Method(Stripe) funcionality. <br>
-On dasboard you can see some metrics,last five users that make register, delete, edit and create new products<br>
+<p>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. <br>
+On the painel dasboard you can see some metrics, like last five users that make register, delete, edit and create new products<br>
 <p>Developed with <code>ReactJS</code>, <code>NodeJs</code>,<code>Axios</code>,</br><code>Express</code>, <code>JWT</code>,<code>Mongoose</code>  and <code>Redux</code> </p> 
 
  
