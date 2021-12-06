@@ -245,7 +245,7 @@ export const Cart = () => {
               shippingAddress
               description={`Your total is $${cart.total}`}
               amount={cart.total * 100}
-              token={onToken}
+              token={onToken} 
               stripeKey={KEY}
             >
               <SummaryButton>CHECKOUT NOW</SummaryButton>

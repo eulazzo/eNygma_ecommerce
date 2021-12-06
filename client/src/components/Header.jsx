@@ -81,12 +81,23 @@ export const Header = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>eNygma</Logo>
+          <Link style={{ color: "black", textDecoration: "none" }} to="/">
+            <Logo>eNygma</Logo>
+          </Link>
         </Center>
         <Right>
-          <MenuItem>Login</MenuItem>
-          <MenuItem>Sign In</MenuItem>
-          <Link style={{color:"#000/cart"}} to="/cart">
+          <Link style={{ color: "black", textDecoration: "none" }} to="/login">
+            <MenuItem>Login</MenuItem>
+          </Link>
+
+          <Link
+            style={{ color: "black", textDecoration: "none" }}
+            to="/register"
+          >
+            <MenuItem>Sign In</MenuItem>
+          </Link>
+
+          <Link style={{ color: "#000/cart" }} to="/cart">
             <MenuItem>
               <Badge badgeContent={quantity} color="primary">
                 <ShoppingCartOutlined />
