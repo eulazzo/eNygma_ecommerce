@@ -6,6 +6,8 @@
 
 # Sigma
 
+
+## Readme not ready yet
  
 
 <p>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. <br>
