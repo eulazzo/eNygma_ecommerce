@@ -1,3 +1,9 @@
+ 
+<h1 align="center">
+   <h2>Readme not ready yet<h2/>
+</h1>
+
+
 <h1 align="center">
    <img alt="sigma" src="github/eNygma.svg" width="150px" />
 </h1>
@@ -6,6 +12,8 @@
 
 # Sigma
 
+
+ 
  
 
 <p>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. <br>
