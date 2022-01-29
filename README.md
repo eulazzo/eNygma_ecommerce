@@ -1,20 +1,13 @@
- 
-<h1 align="center">
-   <h2>Readme not ready yet<h2/>
-</h1>
 
 
 <h1 align="center">
    <img alt="sigma" src="github/eNygma.svg" width="150px" />
 </h1>
 
- ![SIGMA CHAT GIF](github/LoginService.gif)
+ ![SIGMA CHAT GIF](github/loginAndRegister.gif)
 
-# Sigma
+# eNygma
 
-
- 
- 
 
 <p>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. <br>
 On the painel dasboard you can see some metrics, like last five users that make register, delete, edit and create new products<br>
@@ -22,14 +15,21 @@ On the painel dasboard you can see some metrics, like last five users that make 
 
  
 
-<!-- ## :camera: See the app's features:
+ ## :camera: See the app's features:
 
-<h2>Home</h2>
+<h2>Admin Dashboard</h2>
 
-![SIGMA CHAT GIF](github/ChatMessage.gif) -->
+![SIGMA CHAT GIF](github/0-AdminDashboard.gif) 
+
+<h2>Paying some orders with Stripe Payment</h2>
+
+![SIGMA CHAT GIF](github/3-payingStripe.gif) 
+
+<h2>Creating a new product</h2>
+
+![SIGMA CHAT GIF](github/2-creatingAnewProduct.gif) 
 
  
-
 ## Getting started
 
 1. Clone this repo using `git@github.com:eulazzo/ecommerce.git`
