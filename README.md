@@ -13,7 +13,13 @@
 On the painel dasboard you can see some metrics, like last five users that make register, delete, edit and create new products<br>
 <p>Developed with <code>ReactJS</code>, <code>NodeJs</code>,<code>Axios</code>,</br><code>Express</code>, <code>JWT</code>,<code>Mongoose</code>  and <code>Redux</code> </p> 
 
- 
+# About the project and how some features works:
+<p>
+Ecommerce developed with NodeJs, MongoDB, ReactJS, Styled Component, Redux, Stripe, JWT and Firebase to upload images. So far it has features such as login and registration, add to cart, make payment using Stripe, through the admin panel it is possible to edit and add new products, see the list of products and the number of users who have recently created an account.  
+   To make the application more secure, JWT (JSON WEB TOKEN) was used to verify users, providing them with a JSON WEB TOKEN after the login process.</br> 
+   Thus, when they try to make any request, edit or delete any user or product, it is checked whether the request belongs to the user or  if the user is authorized to perform that action. Since when an application is created, one of the most important things to do is handle authentication and authorization.</br></br> For example, an application where users can create a post and after that they can edit or delete it. The crucial part here is authorization because they (users) should be able to delete only their respective posts, if they try to delete posts from other users they should get an error like “You can't delete this post” or something like that.  
+   On the backend, if the login is ok, the JSON WEB TOKEN is created. In the creation process, jwt.sign() received the user ID and the “isAdmin” property as parameters, because when we try to delete a user, the ID inside the JSON WEB TOKEN is checked if it is the same as the one that comes from the database. data, if so, means that this user is a customer and therefore can delete and edit the profile. The isAdmin property, if isAdmin===true, can delete any user or do any CRUD for any other collection in the database.
+<p/>
 
  ## :camera: See the app's features:
 
