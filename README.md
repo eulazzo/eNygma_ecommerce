@@ -7,11 +7,11 @@
 </div>
 
 <p align="center" >
-  <a href="#-sobre-a-aplica%C3%A7%C3%A3o"> Sobre </a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-conteúdos-aplicados"> Conteúdos aplicados</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-suporte"> Suporte </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licen%C3%A7a">Licença</a>
+  <a href="#-sobre-a-aplica%C3%A7%C3%A3o"> About </a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Techs</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-conteúdos-aplicados"> Content</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-suporte"> Suport </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licen%C3%A7a">License</a>
 </p>
 
 <p align="center">
@@ -23,13 +23,9 @@
   <img src="https://img.shields.io/static/v1?label=license&message=MIT&color=D90D32&labelColor=008080" alt="License">
 </p>
 
-
- 
-
  ![SIGMA CHAT GIF](github/loginAndRegister.gif)
 
 # eNygma
-
 
 <p>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. <br>
 On the painel dasboard you can see some metrics, like last five users that make register, delete, edit and create new products<br>
