@@ -10,7 +10,7 @@
   <a href="#about-the-project-and-how-some-features-works"> About </a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
   <a href="#see-app-features">Gifs</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#getting-started">Getting started</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#tecnologies">Techs</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#technologies">Techs</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#license">License</a>
 </p>
 
@@ -78,7 +78,7 @@ a window will open, but for the data show up, we have to start the back-end serv
 2. Type again <code>npm start</code> for the admin dashboard works properly <br>
 3. now you are ready to create an account and login
 
-## Technologies
+## 🚀 Technologies
 
 <table>
    
