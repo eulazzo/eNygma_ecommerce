@@ -78,7 +78,7 @@ a window will open, but for the data show up, we have to start the back-end serv
 2. Type again <code>npm start</code> for the admin dashboard works properly <br>
 3. now you are ready to create an account and login
 
-## :rocket: Technologies
+## Technologies
 
 <table>
    
