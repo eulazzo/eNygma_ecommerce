@@ -7,11 +7,11 @@
 </div>
 
 <p align="center" >
-  <a href="#-sobre-a-aplica%C3%A7%C3%A3o"> About </a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Techs</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-conteúdos-aplicados"> Content</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-suporte"> Suport </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-licen%C3%A7a">License</a>
+  <a href="#about-the-project-and-how-some-features-works"> About </a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+  <a href="#see-app-features">Gifs</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#getting-started">Getting started</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologies">Techs</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">License</a>
 </p>
 
 <p align="center">
@@ -39,17 +39,17 @@ Ecommerce developed with NodeJs, MongoDB, ReactJS, Styled Component, Redux, Stri
    On the backend, if the login is ok, the JSON WEB TOKEN is created. In the creation process, jwt.sign() received the user ID and the “isAdmin” property as parameters, because when we try to delete a user, the ID inside the JSON WEB TOKEN is checked if it is the same as the one that comes from the database. data, if so, means that this user is a customer and therefore can delete and edit the profile. The isAdmin property, if isAdmin===true, can delete any user or do any CRUD for any other collection in the database.
 <p/>
 
- ## :camera: See the app's features:
+ ## See app features:
 
-<h2>Admin Dashboard</h2>
+### Admin Dashboard
 
 ![SIGMA CHAT GIF](github/0-AdminDashboard.gif) 
 
-<h2>Paying some orders with Stripe Payment</h2>
+### Paying some orders with Stripe Payment
 
 ![SIGMA CHAT GIF](github/3-payingStripe.gif) 
 
-<h2>Creating a new product</h2>
+### Creating a new product
 
 ![SIGMA CHAT GIF](github/2-creatingAnewProduct.gif) 
 
