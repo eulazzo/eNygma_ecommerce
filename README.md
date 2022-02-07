@@ -25,13 +25,25 @@
 
  ![SIGMA CHAT GIF](github/loginAndRegister.gif)
 
-# eNygma
+
+## About the project and how some features works
+
+### eNygma - ecommerce
 
 <p>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. <br>
 On the painel dasboard you can see some metrics, like last five users that make register, delete, edit and create new products<br>
 <p>Developed with <code>ReactJS</code>, <code>NodeJs</code>,<code>Axios</code>,</br><code>Express</code>, <code>JWT</code>,<code>Mongoose</code>  and <code>Redux</code> </p> 
 
-# About the project and how some features works:
+### Features
+- [X] Register
+- [X] Login
+- [X] Add To Cart
+- [X] Admin Dashboard
+- [X] Payment Method(Stripe) funcionality
+- [X] On the painel dasboard you can see some metrics, like the last five users that make register, delete, edit and create new products
+- [X] Responsive
+ 
+
 <p>
 Ecommerce developed with NodeJs, MongoDB, ReactJS, Styled Component, Redux, Stripe, JWT and Firebase to upload images. So far it has features such as login and registration, add to cart, make payment using Stripe, through the admin panel it is possible to edit and add new products, see the list of products and the number of users who have recently created an account.  
    To make the application more secure, JWT (JSON WEB TOKEN) was used to verify users, providing them a JSON WEB TOKEN after the login process.</br> 
