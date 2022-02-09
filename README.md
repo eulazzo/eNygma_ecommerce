@@ -3,7 +3,7 @@
 </h1>
   
 <div align="center">
-  <h1>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. </h1>
+  <h1>Ecommerce Application with Register,Login, Add To Cart and Payment Method ( Stripe ) funcionality. </h1>
 </div>
 
 <p align="center" >
