@@ -146,9 +146,6 @@ On the painel dasboard you can see some metrics, like last five users that make 
       }
     ```
  
- 
-
- 
 ### updateProduct
   * Método: PUT
   * Path: `/products/:id`
@@ -247,6 +244,88 @@ On the painel dasboard you can see some metrics, like last five users that make 
     ]
   ```
  
+### Orders
+
+### addOrder
+  * Método: POST
+  * Path: `/orders/`
+  * Input: 
+    ```
+     {
+       "userId":"619d1da08037c80957db697c",
+       "amount":200,
+       "status":"finished",
+       "products":[{
+           "productId":"619e859c210e6a75eae2bed5",
+           "quantity":3
+      }],
+      "address":{
+        "street":"Rua ztoX",
+        "from":"USA"
+       }
+      }
+    ```
+    * Output:
+      ```
+      {
+       "userId": "619d1da08037c80957db697c",
+       "products": [
+           {
+               "productId": "619e859c210e6a75eae2bed5",
+               "quantity": 3,
+               "_id": "62545a8e4cd025591a0673f2"
+           }
+       ],
+       "amount": 200,
+       "address": {
+           "street": "Rua ztoX"",
+           "from": "USA"
+       },
+       "status": "finished",
+       "_id": "62545a8e4cd025591a0673f1",
+       "createdAt": "2022-04-11T16:42:54.307Z",
+       "updatedAt": "2022-04-11T16:42:54.307Z",
+       "__v": 0
+       }
+      ```
+ ### Income
+  * Método: GET
+  * Path: `/orders/income?token={token}`
+  * Output:
+    ```
+    [
+      {
+        "_id": 4,
+        "total": 200
+      }
+    ]
+    ```
+    
+ ### User
+  * ### Register
+    * Método: POST
+    * Path: `/register`
+    * Input:
+      ```
+        {
+          "username":"eulazzo",
+          "email":"lazaro@ctemplar.com",
+          "password":"123456"
+        }
+       ```
+     * Ouput:
+       ```
+       {
+          "username": "eulazzo",
+          "email": "lazaro@ctemplar.com",
+          "password": "U2FsdGVkX18d4Q4Xux+1bVA7NiBaYzcP8xJXVD57WWM=",
+          "isAdmin": false,
+          "_id": "62545ca44cd025591a0673f9",
+          "createdAt": "2022-04-11T16:51:48.785Z",
+          "updatedAt": "2022-04-11T16:51:48.785Z",
+          "__v": 0
+         }
+       ```
 
 <p>
 Ecommerce developed with NodeJs, MongoDB, ReactJS, Styled Component, Redux, Stripe, JWT and Firebase to upload images. So far it has features such as login and registration, add to cart, make payment using Stripe, through the admin panel it is possible to edit and add new products, see the list of products and the number of users who have recently created an account.  
