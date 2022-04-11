@@ -44,7 +44,7 @@ On the painel dasboard you can see some metrics, like last five users that make 
 - [X] Responsive
 
 
-# E-COMMERCE Enygma :shopping_cart: :shopping_cart: :shopping_cart:
+# E-COMMERCE ENYGMA :shopping_cart: :shopping_cart: :shopping_cart:
 
 ## DOCUMENTATION
 
