@@ -42,6 +42,210 @@ On the painel dasboard you can see some metrics, like last five users that make 
 - [X] Payment Method(Stripe) funcionality
 - [X] On the painel dasboard you can see some metrics, like the last five users that make register, delete, edit and create new products
 - [X] Responsive
+
+
+# E-COMMERCE Enygma :shopping_cart: :shopping_cart: :shopping_cart:
+
+## DOCUMENTATION
+
+* Clone this repo with  <code>git@github.com:eulazzo/ecommerce.git</code> ;
+* Move to `api`,`admin`, `client` and run `npm install` to add dependencies;
+* Inside api folder create a `.env` file and fill in the follow keys  :
+  ```
+   MONGO_URL = 
+   PASS_SEC = 
+   JWT_SEC = 
+   STRIPE_KEY =  
+  ```
+* Inside client folder create a `.env` file and fill in the follow key:
+  ```
+   REACT_APP_STRIPE=
+  ```
+* run `npm run start` to start the server.
+
+## Endpoints
+
+### Products
+
+* ### addProducts
+  * Método: POST
+  * Path: `/products`
+  * First register a user and change `isAdmin` to `true`
+  * Use postman or insommia and make login, the output take it the `accessToken`
+  * Click on `Headers` and add key `token` and for the value `Bearer PUT HERE YOUR acessToken`
+  * Input: (Will return a error in case you are not authenticated)
+   ```
+   {
+      "title": "T-shirt blackPower",
+      "desc": "Loren ipsum is dummy test of the winter",
+      "img": "https://i.ibb.co/YZC6n90/coat1.png",
+      "categories": ["man", "coat"],
+      "price":  44,
+      "inStock": "true",
+      "color": ["blue"],
+      "size": ["S", "M", "L"]
+     }
+   ```
+  * Ouput:
+    ```
+    {
+       "title": "T-shirt blackPower",
+       "desc": "Loren ipsum is dummy test of the winter",
+       "img": "https://i.ibb.co/YZC6n90/coat1.png",
+       "categories": [
+           "man",
+           "coat"
+       ],
+       "size": [
+           "S",
+           "M",
+           "L"
+       ],
+       "color": [
+           "blue"
+       ],
+       "price": 44,
+       "inStock": true,
+       "_id": "62544bd64583b32d4ad97e54",
+       "createdAt": "2022-04-11T15:40:06.821Z",
+       "updatedAt": "2022-04-11T15:40:06.821Z",
+       "__v": 0
+      }
+    ```
+    
+
+
+### GetProduct
+  * Método: GET
+  * Path: `/products/find/:id`
+  * Ouput: 
+    ```
+    {
+       "_id": "619fc82750cab4338cd5c162",
+       "title": "T-shirt happyness XL",
+       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+       "img": "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+       "categories": [
+           "Man"
+       ],
+       "price": 288,
+       "createdAt": "2021-11-24T18:34:04.647Z",
+       "updatedAt": "2021-12-02T02:27:51.775Z",
+       "__v": 0,
+       "inStock": true,
+       "color": [
+           "Yellow",
+           "Black",
+           "White"
+       ],
+       "size": [
+           "S",
+           "M",
+           "L"
+        ]
+      }
+    ```
+ 
+ 
+
+ 
+### updateProduct
+  * Método: PUT
+  * Path: `/products/:id`
+  * Input: 
+    ```
+     {
+       "price":4000,
+      "title":"Herman Why not"
+     } 
+    ```
+ * Output:
+   ```
+      {
+       "_id": "619fc82750cab4338cd5c162",
+       "title": "Herman Why not",
+       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+       "img": "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+       "categories": [
+           "Man"
+       ],
+       "price": 4000,
+       "createdAt": "2021-11-24T18:34:04.647Z",
+       "updatedAt": "2022-04-11T15:57:09.362Z",
+       "__v": 0,
+       "inStock": true,
+       "color": [
+           "Yellow",
+           "Black",
+           "White"
+       ],
+       "size": [
+           "S",
+           "M",
+           "L"
+       ]
+    }
+   ```
+ 
+### getAllProducts
+  * Método: GET
+  * Path: `/products
+  * Ouput: 
+  ```
+    [
+       {
+           "_id": "619fc7f850cab4338cd5c160",
+           "title": "T-shirt Good Vibes",
+           "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+           "img": " https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+           "categories": [
+               "Tshirt"
+           ],
+           "price": 120,
+           "createdAt": "2021-11-24T18:34:04.647Z",
+           "updatedAt": "2021-12-02T02:17:45.667Z",
+           "__v": 0,
+           "inStock": true,
+           "color": [
+               "Black",
+               "Blue",
+               "White"
+           ],
+           "size": [
+               "S",
+               "M",
+               "L"
+           ]
+       },
+       {
+           "_id": "619fc81e50cab4338cd5c161",
+           "title": "Luxurie Black TPower ",
+           "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+           "img": "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+           "categories": [
+               "Man",
+               "Tshirt"
+           ],
+           "price": 999,
+           "createdAt": "2021-11-24T18:34:04.647Z",
+           "updatedAt": "2021-11-24T18:34:04.647Z",
+           "__v": 0,
+           "inStock": true,
+           "color": [
+               "Black",
+               "Red",
+               "Pink",
+               "Blue",
+               ""
+           ],
+           "size": [
+               "S",
+               "M",
+               "L"
+           ]
+       }  
+    ]
+  ```
  
 
 <p>
