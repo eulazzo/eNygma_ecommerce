@@ -74,18 +74,18 @@ On the painel dasboard you can see some metrics, like last five users that make 
   * Use postman or insommia and make login, the output take it the `accessToken`
   * Click on `Headers` and add key `token` and for the value `Bearer PUT HERE YOUR acessToken`
   * Input: (Will return a error in case you are not authenticated)
-   ```
-   {
-      "title": "T-shirt blackPower",
-      "desc": "Loren ipsum is dummy test of the winter",
-      "img": "https://i.ibb.co/YZC6n90/coat1.png",
-      "categories": ["man", "coat"],
-      "price":  44,
-      "inStock": "true",
-      "color": ["blue"],
-      "size": ["S", "M", "L"]
-     }
-   ```
+    ```
+      {
+         "title": "T-shirt blackPower",
+         "desc": "Loren ipsum is dummy test of the winter",
+         "img": "https://i.ibb.co/YZC6n90/coat1.png",
+         "categories": ["man", "coat"],
+         "price":  44,
+         "inStock": "true",
+         "color": ["blue"],
+         "size": ["S", "M", "L"]
+        }
+    ```
   * Ouput:
     ```
     {
@@ -188,61 +188,61 @@ On the painel dasboard you can see some metrics, like last five users that make 
   * Método: GET
   * Path: `/products
   * Ouput: 
-  ```
-    [
-       {
-           "_id": "619fc7f850cab4338cd5c160",
-           "title": "T-shirt Good Vibes",
-           "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-           "img": " https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
-           "categories": [
-               "Tshirt"
-           ],
-           "price": 120,
-           "createdAt": "2021-11-24T18:34:04.647Z",
-           "updatedAt": "2021-12-02T02:17:45.667Z",
-           "__v": 0,
-           "inStock": true,
-           "color": [
-               "Black",
-               "Blue",
-               "White"
-           ],
-           "size": [
-               "S",
-               "M",
-               "L"
-           ]
-       },
-       {
-           "_id": "619fc81e50cab4338cd5c161",
-           "title": "Luxurie Black TPower ",
-           "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-           "img": "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
-           "categories": [
-               "Man",
-               "Tshirt"
-           ],
-           "price": 999,
-           "createdAt": "2021-11-24T18:34:04.647Z",
-           "updatedAt": "2021-11-24T18:34:04.647Z",
-           "__v": 0,
-           "inStock": true,
-           "color": [
-               "Black",
-               "Red",
-               "Pink",
-               "Blue",
-               ""
-           ],
-           "size": [
-               "S",
-               "M",
-               "L"
-           ]
-       }  
-    ]
-  ```
+    ```
+       [
+          {
+              "_id": "619fc7f850cab4338cd5c160",
+              "title": "T-shirt Good Vibes",
+              "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+              "img": " https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+              "categories": [
+                  "Tshirt"
+              ],
+              "price": 120,
+              "createdAt": "2021-11-24T18:34:04.647Z",
+              "updatedAt": "2021-12-02T02:17:45.667Z",
+              "__v": 0,
+              "inStock": true,
+              "color": [
+                  "Black",
+                  "Blue",
+                  "White"
+              ],
+              "size": [
+                  "S",
+                  "M",
+                  "L"
+              ]
+          },
+          {
+              "_id": "619fc81e50cab4338cd5c161",
+              "title": "Luxurie Black TPower ",
+              "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+              "img": "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+              "categories": [
+                  "Man",
+                  "Tshirt"
+              ],
+              "price": 999,
+              "createdAt": "2021-11-24T18:34:04.647Z",
+              "updatedAt": "2021-11-24T18:34:04.647Z",
+              "__v": 0,
+              "inStock": true,
+              "color": [
+                  "Black",
+                  "Red",
+                  "Pink",
+                  "Blue",
+                  ""
+              ],
+              "size": [
+                  "S",
+                  "M",
+                  "L"
+              ]
+          }  
+       ]
+    ```
  
 ### Orders
 
@@ -337,7 +337,7 @@ On the painel dasboard you can see some metrics, like last five users that make 
           "username":"eulazzo",
           "password":"123456"
         }
-       ```
+      ```
      * Ouput:
        ```
          {
