@@ -348,7 +348,7 @@ On the painel dasboard you can see some metrics, like last five users that make 
              "createdAt": "2022-01-28T21:48:50.314Z",
              "updatedAt": "2022-01-28T21:48:50.314Z",
              "__v": 0,
-                "accessToken":             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZjQ2NGMyN2ViODBkZTBlOGMyYjAwOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTcxNjQ3OCwiZXhwIjo               xNjQ5OTc1Njc4fQ._TVpDLYOL3I2mq_e3tBcjBWqWEwPNFftu2V0xdEqYo8"
+                "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpBkZTBlOGMyYjAwOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTcxNjQ3OCwiZXhwIjo"
          }
        ```
 
