@@ -63,9 +63,9 @@ On the painel dasboard you can see some metrics, like last five users that make 
   ```
 * run `npm run start` to start the server.
 
-## Endpoints
+ ## Endpoints
 
-### Products
+ ### Products
 
 * ### addProducts
   * Método: POST
@@ -115,7 +115,7 @@ On the painel dasboard you can see some metrics, like last five users that make 
     
 
 
-### GetProduct
+* ### GetProduct
   * Método: GET
   * Path: `/products/find/:id`
   * Ouput: 
@@ -146,7 +146,7 @@ On the painel dasboard you can see some metrics, like last five users that make 
       }
     ```
  
-### updateProduct
+* ### updateProduct
   * Método: PUT
   * Path: `/products/:id`
   * Input: 
@@ -156,8 +156,8 @@ On the painel dasboard you can see some metrics, like last five users that make 
       "title":"Herman Why not"
      } 
     ```
- * Output:
-   ```
+   * Output:
+     ```
       {
        "_id": "619fc82750cab4338cd5c162",
        "title": "Herman Why not",
@@ -181,10 +181,10 @@ On the painel dasboard you can see some metrics, like last five users that make 
            "M",
            "L"
        ]
-    }
-   ```
+      }
+     ```
  
-### getAllProducts
+* ### getAllProducts
   * Método: GET
   * Path: `/products
   * Ouput: 
@@ -246,7 +246,7 @@ On the painel dasboard you can see some metrics, like last five users that make 
  
 ### Orders
 
-### addOrder
+* ### addOrder
   * Método: POST
   * Path: `/orders/`
   * Input: 
@@ -288,18 +288,18 @@ On the painel dasboard you can see some metrics, like last five users that make 
           "__v": 0
        }
      ```
- ### Income
-  * Método: GET
-  * Path: `/orders/income?token={token}`
-  * Output:
-    ```
-    [
-      {
-        "_id": 4,
-        "total": 200
-      }
-    ]
-    ```
+ * ### Income
+   * Método: GET
+   * Path: `/orders/income?token={token}`
+   * Output:
+     ```
+       [
+         {
+           "_id": 4,
+           "total": 200
+         }
+       ]
+     ```
     
  ### User
   * ### Register
