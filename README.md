@@ -189,59 +189,59 @@ On the painel dasboard you can see some metrics, like last five users that make 
   * Path: `/products
   * Ouput: 
     ```
-       [
-          {
-              "_id": "619fc7f850cab4338cd5c160",
-              "title": "T-shirt Good Vibes",
-              "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-              "img": " https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
-              "categories": [
-                  "Tshirt"
-              ],
-              "price": 120,
-              "createdAt": "2021-11-24T18:34:04.647Z",
-              "updatedAt": "2021-12-02T02:17:45.667Z",
-              "__v": 0,
-              "inStock": true,
-              "color": [
-                  "Black",
-                  "Blue",
-                  "White"
-              ],
-              "size": [
-                  "S",
-                  "M",
-                  "L"
-              ]
-          },
-          {
-              "_id": "619fc81e50cab4338cd5c161",
-              "title": "Luxurie Black TPower ",
-              "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-              "img": "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
-              "categories": [
-                  "Man",
-                  "Tshirt"
-              ],
-              "price": 999,
-              "createdAt": "2021-11-24T18:34:04.647Z",
-              "updatedAt": "2021-11-24T18:34:04.647Z",
-              "__v": 0,
-              "inStock": true,
-              "color": [
-                  "Black",
-                  "Red",
-                  "Pink",
-                  "Blue",
-                  ""
-              ],
-              "size": [
-                  "S",
-                  "M",
-                  "L"
-              ]
-          }  
-       ]
+      [
+       {
+           "_id": "619fc7f850cab4338cd5c160",
+           "title": "T-shirt Good Vibes",
+           "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+           "img": " https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+           "categories": [
+               "Tshirt"
+           ],
+           "price": 120,
+           "createdAt": "2021-11-24T18:34:04.647Z",
+           "updatedAt": "2021-12-02T02:17:45.667Z",
+           "__v": 0,
+           "inStock": true,
+           "color": [
+               "Black",
+               "Blue",
+               "White"
+           ],
+           "size": [
+               "S",
+               "M",
+               "L"
+           ]
+       },
+       {
+           "_id": "619fc81e50cab4338cd5c161",
+           "title": "Luxurie Black TPower ",
+           "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+           "img": "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+           "categories": [
+               "Man",
+               "Tshirt"
+           ],
+           "price": 999,
+           "createdAt": "2021-11-24T18:34:04.647Z",
+           "updatedAt": "2021-11-24T18:34:04.647Z",
+           "__v": 0,
+           "inStock": true,
+           "color": [
+               "Black",
+               "Red",
+               "Pink",
+               "Blue",
+               ""
+           ],
+           "size": [
+               "S",
+               "M",
+               "L"
+           ]
+       }  
+      ]
     ```
  
 ### Orders
@@ -265,29 +265,29 @@ On the painel dasboard you can see some metrics, like last five users that make 
        }
       }
     ```
-    * Output:
-      ```
+  * Output:
+    ```
       {
-       "userId": "619d1da08037c80957db697c",
-       "products": [
-           {
-               "productId": "619e859c210e6a75eae2bed5",
-               "quantity": 3,
-               "_id": "62545a8e4cd025591a0673f2"
-           }
-       ],
-       "amount": 200,
-       "address": {
-           "street": "Rua ztoX"",
-           "from": "USA"
-       },
-       "status": "finished",
-       "_id": "62545a8e4cd025591a0673f1",
-       "createdAt": "2022-04-11T16:42:54.307Z",
-       "updatedAt": "2022-04-11T16:42:54.307Z",
-       "__v": 0
+          "userId": "619d1da08037c80957db697c",
+          "products": [
+              {
+                  "productId": "619e859c210e6a75eae2bed5",
+                  "quantity": 3,
+                  "_id": "62545a8e4cd025591a0673f2"
+              }
+          ],
+          "amount": 200,
+          "address": {
+              "street": "Rua ztoX"",
+              "from": "USA"
+          },
+          "status": "finished",
+          "_id": "62545a8e4cd025591a0673f1",
+          "createdAt": "2022-04-11T16:42:54.307Z",
+          "updatedAt": "2022-04-11T16:42:54.307Z",
+          "__v": 0
        }
-      ```
+     ```
  ### Income
   * Método: GET
   * Path: `/orders/income?token={token}`
@@ -313,8 +313,8 @@ On the painel dasboard you can see some metrics, like last five users that make 
           "password":"123456"
         }
        ```
-     * Ouput:
-       ```
+    * Ouput:
+      ```
        {
           "username": "eulazzo",
           "email": "lazaro@ctemplar.com",
@@ -324,8 +324,8 @@ On the painel dasboard you can see some metrics, like last five users that make 
           "createdAt": "2022-04-11T16:51:48.785Z",
           "updatedAt": "2022-04-11T16:51:48.785Z",
           "__v": 0
-         }
-       ```
+        }
+      ```
    
  ### User
   * ### Login
