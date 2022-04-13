@@ -326,8 +326,7 @@ On the painel dasboard you can see some metrics, like last five users that make 
           "__v": 0
         }
       ```
-   
- ### User
+
   * ### Login
     * Método: POST
     * Path: `/login`
