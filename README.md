@@ -26,9 +26,12 @@
  ![SIGMA CHAT GIF](github/loginAndRegister.gif)
 
 
+ 
+
 ## About the project and how some features works
 
 ### eNygma - ecommerce
+## I did a video showing the project, u can check out <a href="https://www.youtube.com/watch?v=h-2jtDs32qc&t=5s">Here</a>
 
 <p>Ecommerce Application with Register,Login, Add To Cart and Payment Method(Stripe) funcionality. <br>
 On the painel dasboard you can see some metrics, like last five users that make register, delete, edit and create new products<br>
